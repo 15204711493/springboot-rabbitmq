@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @Slf4j
-@RestController
-@RequestMapping("ttl")
-@Api
+//@RestController
+//@RequestMapping("ttl")
+//@Api
 public class SendMsgController {
 
 

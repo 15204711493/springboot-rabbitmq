@@ -24,9 +24,10 @@ public class ProducerController {
     @GetMapping("/send/{message}")
     public void sm(@PathVariable String message){
         CorrelationData correlationData = new CorrelationData("1");
-        rabbitTemplate.convertAndSend(ConfirmConfig.e_exchange,ConfirmConfig.routingKey,message,correlationData);
+        rabbitTemplate.convertAndSend(ConfirmConfig.e_exchange,ConfirmConfig.routingKey+"1",message,correlationData);
 
         log.info("当前时间:{},收到条信息:{}",new Date().toString(),message);
     }
 
 }
+

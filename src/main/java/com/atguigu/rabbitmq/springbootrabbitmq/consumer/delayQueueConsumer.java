@@ -10,7 +10,7 @@ import java.util.Date;
 
 //插件
 @Slf4j
-@Component
+//@Component
 public class delayQueueConsumer {
 
 

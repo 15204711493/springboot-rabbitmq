@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //延迟
-@Configuration
+//@Configuration
 public class DelayedQueueConfig {
 
     //队列

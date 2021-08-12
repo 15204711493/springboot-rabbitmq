@@ -35,9 +35,7 @@ public class MyCallBack implements RabbitTemplate.ConfirmCallback,RabbitTemplate
 
     }
 
-    @Override
-    public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
-    }
+
 
     @Override
     public void returnedMessage(ReturnedMessage returnedMessage) {

@@ -7,14 +7,13 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
 @Slf4j
 @Component
-public class Consumer {
+public class WarningConsumer {
 
-    @RabbitListener(queues = ConfirmConfig.q_queue)
+    @RabbitListener(queues = ConfirmConfig.warning_queue)
     public void re(Message message){
         String m = new String(message.getBody());
-        log.info("当前时间:{},收到队列confirm.queue消息:{}",new Date().toString(),m);
+        log.info("报警{}",m);
     }
 }
